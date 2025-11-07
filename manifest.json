@@ -1,0 +1,70 @@
+{
+	"_version": "1.15.0",
+	"sap.app": {
+		"id": "com.winslow.FormsProceduresCard",
+		"type": "card",
+		"title": "Forms and Procedures",
+		"subTitle": "",
+		"applicationVersion": {
+			"version": "1.0.0"
+		}
+	},
+	"sap.ui": {
+		"technology": "UI5",
+		"deviceTypes": {
+			"desktop": true,
+			"phone": true,
+			"tablet": true
+		},
+		"icons": {
+			"icon": "sap-icon://bus-public-transport"
+		}
+	},
+	"sap.ui5": {
+		"rootView": {
+			"viewName": "com.winslow.FormsProceduresCard.View",
+			"type": "XML",
+			"async": true,
+			"id": "app"
+		},
+		"dependencies": {
+			"minUI5Version": "1.38",
+			"libs": {
+				"sap.m": {}
+			}
+		},
+		"config": {
+			"sample": {
+				"stretch": true,
+				"files": [
+					"Card.controller.js"
+				]
+			}
+		}
+	},
+	"sap.card": {
+		"type": "Component",
+		"designtime": "dt/configuration",
+		"header": {
+			"icon": {
+				"src": "sap-icon://bus-public-transport"
+			},
+			"title": "Buy your bus ticket online",
+			"subTitle": "You’ll receive an email with a QR code. No need to print!",
+			"visible": false
+		},
+		"actions": [
+			{
+				"type": "Navigation",
+				"parameters": {
+					"url": "#workzone-admin&/groups/AAA/workpage_tabs/111",
+					"target": "_self"
+				},
+				"id": "confinedSpaces"
+			}
+		]
+	},
+	"sap.platform.mobilecards": {
+		"compatible": true
+	}
+}

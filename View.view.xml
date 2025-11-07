@@ -1,0 +1,76 @@
+<mvc:View
+    xmlns:mvc="sap.ui.core.mvc"
+    xmlns="sap.m"
+    xmlns:layout="sap.ui.layout"
+    controllerName="com.winslow.FormsProceduresCard.Card"
+    width="100%">
+  
+  <VBox class="sapUiMediumMargin">
+
+    <!-- 🔍 Search and Popular Searches -->
+    <HBox alignItems="Center" wrap="Wrap" class="sapUiSmallMarginBottom">
+      <SearchField 
+        width="200px"
+        placeholder="Forms, Procedures and manuals" 
+        search="onSearch"
+        class="sapUiTinyMarginEnd" />
+
+      <Title text="POPULAR SEARCHES" level="H5" class="sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd" />
+
+      <Button text="PERMIT TO WORK" type="Default" class="sapUiTinyMarginEnd" />
+      <Button text="ENVIRONMENT" type="Default" class="sapUiTinyMarginEnd" />
+      <Button text="TRENCH" type="Default" class="sapUiTinyMarginEnd" />
+      <Button text="PERMIT" type="Default" class="sapUiTinyMarginEnd" />
+    </HBox>
+    
+    <Toolbar design="Transparent"></Toolbar>
+   
+    <layout:Grid defaultSpan="L4 M6 S12" hSpacing="2" vSpacing="2">
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image press="onImagePress" src="{images>/Image_1}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Confined Spaces"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_2}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Permit to Work"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_3}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Asbestos"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_4}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Demolition"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_5}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Mobile Plant"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_6}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Excavation &amp; Trenching"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_7}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Cranes &amp; Lifting"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_8}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Electrical &amp; Infrastructure"  wrapping="true" />
+      </FlexBox>
+
+      <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
+        <Image src="{images>/Image_9}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Title text="Product Handling"  wrapping="true" />
+      </FlexBox>
+    </layout:Grid>
+  </VBox>
+</mvc:View>

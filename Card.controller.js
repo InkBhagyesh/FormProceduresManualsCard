@@ -24,10 +24,30 @@ sap.ui.define([
 			this.getView().setModel(oImgModel, "images");
 
 		},
-		onImagePress: function () {
-			var link = window.location.href
-			window.location.href = link.replace("/groups","/groups/ZXh1H0w85WvrL2yEX1B01k/workpage_tabs/dP2IPsuYrY01MCy9L7L01k?headless=true") ;
+		onImagePress: function (oEvent) {
+			debugger;
+
+			// Current page URL
+			var currentUrl = window.location.href;
+
+			// Get source (Image or Link)
+			var oControl = oEvent.getSource();
+
+			// Get alt or text
+			var displayText = oControl.getAlt ? oControl.getAlt() : oControl.getText();
+			displayText = encodeURIComponent(displayText || "");
+
+			// Safe redirect URL generation
+			var newUrl = currentUrl.replace(
+				"/groups",
+				"/groups/VZiewdtxkBMEMyMM7HN01k/workpage_tabs/Ev5FsdgoFQxo61jDqD001k?headless=true&title=" + displayText
+			);
+			// /groups/VZiewdtxkBMEMyMM7HN01k/workpage_tabs/Ev5FsdgoFQxo61jDqD001k
+
+			// Redirect
+			window.location.href = newUrl;
 		},
+
 		// onImagePress: function () {
 		// 	const aActions = this.getOwnerComponent().getManifestEntry("/sap.card/actions");
 		// 	const oAction = aActions.find(a => a.id === "confinedSpaces");

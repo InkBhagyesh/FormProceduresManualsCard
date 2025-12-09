@@ -28,48 +28,48 @@
     <layout:Grid defaultSpan="L4 M6 S12" hSpacing="2" vSpacing="2">
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image press="onImagePress" src="{images>/Image_1}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Confined Spaces"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_1}" alt="Confied Spaces" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Confined Spaces" press="onImagePress" wrapping="true" class="customLink" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_2}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Permit to Work"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_2}" alt="Permit to Work" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Permit to Work" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_3}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Asbestos"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_3}" alt="Sewer Tech" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Sewer Tech" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_4}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Demolition"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_4}" alt="Water Tech" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Water Tech"  wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_5}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Mobile Plant"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_5}" alt="Mobile Plant" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Mobile Plant" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_6}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Excavation &amp; Trenching"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_6}" alt="Excavation &amp; Trenching" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Excavation &amp; Trenching" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_7}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Cranes &amp; Lifting"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_7}" alt="Cranes &amp; Lifting" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Cranes &amp; Lifting" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_8}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Electrical &amp; Infrastructure"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_8}" alt="SWMS" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="SWMS" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image src="{images>/Image_9}" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Title text="Product Handling"  wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_9}" alt="Product Handling" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Product Handling" press="onImagePress" wrapping="true" class="customLink"/>
       </FlexBox>
     </layout:Grid>
   </VBox>

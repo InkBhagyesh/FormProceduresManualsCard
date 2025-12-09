@@ -1,0 +1,29 @@
+/* Keep default color, only remove underline */
+.customLink {
+    text-decoration: none !important;
+    background: transparent !important;
+    font-size: medium !important;
+}
+
+/* Remove underline on hover */
+.customLink:hover {
+    text-decoration: none !important;
+    background: transparent !important;
+}
+
+/* Remove active background */
+.customLink:active {
+    background: transparent !important;
+}
+
+/* Remove focus background */
+.customLink:focus {
+    background: transparent !important;
+    outline: none !important;
+}
+
+/* Remove focus visible ring color */
+.customLink:focus-visible {
+    background: transparent !important;
+    outline: none !important;
+}

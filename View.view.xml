@@ -3,7 +3,7 @@
     xmlns="sap.m"
     xmlns:layout="sap.ui.layout"
     controllerName="com.winslow.FormsProceduresCard.Card"
-    width="100%">
+    width="100%" busyIndicatorDelay="0">
   
   <VBox class="sapUiMediumMargin">
 
@@ -17,10 +17,19 @@
 
       <Title text="POPULAR SEARCHES" level="H5" class="sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd" />
 
-      <Button text="PERMIT TO WORK" type="Default" class="sapUiTinyMarginEnd" />
-      <Button text="ENVIRONMENT" type="Default" class="sapUiTinyMarginEnd" />
-      <Button text="TRENCH" type="Default" class="sapUiTinyMarginEnd" />
-      <Button text="PERMIT" type="Default" class="sapUiTinyMarginEnd" />
+      <Button text="PERMIT TO WORK" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
+      <Button text="CONFINED SPACE" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
+      <Button text="SWMS" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
+      <Button text="SEWER TECH" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
+      <!-- <HBox visible="{= ${TopTabsModel>/}.length > 0 ? true : false }" items="{TopTabsModel>/}">
+        <items>
+          <Button 
+            text="{TopTabsModel>title}" 
+            type="Default" 
+            class="sapUiTinyMarginEnd" 
+            press=".onPopularTabPress" />
+        </items>
+      </HBox> -->
     </HBox>
     
     <Toolbar design="Transparent"></Toolbar>
@@ -28,8 +37,8 @@
     <layout:Grid defaultSpan="L4 M6 S12" hSpacing="2" vSpacing="2">
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image press="onImagePress" src="{images>/Image_1}" alt="Confied Spaces" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Confined Spaces" press="onImagePress" wrapping="true" class="customLink" />
+        <Image press="onImagePress" src="{images>/Image_1}" alt="Confied Space" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Confined Space" press="onImagePress" wrapping="true" class="customLink" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">

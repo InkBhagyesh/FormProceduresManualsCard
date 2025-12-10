@@ -52,6 +52,18 @@
 	"sap.card": {
 		"type": "Component",
 		"designtime": "dt/configuration",
+		"configuration": {
+			"destinations": {
+				"JAM": {
+					"name": "JAM",
+					"label": "BTP JAM Destination"
+				},
+				"BMSPortal_API": {
+					"name": "BMSPortal_API",
+					"label": "BTP CAP Destination"
+				}
+			}
+		},
 		"header": {
 			"icon": {
 				"src": "sap-icon://bus-public-transport"

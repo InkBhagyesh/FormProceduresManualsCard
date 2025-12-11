@@ -37,7 +37,7 @@
     <layout:Grid defaultSpan="L4 M6 S12" hSpacing="2" vSpacing="2">
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image press="onImagePress" src="{images>/Image_1}" alt="Confied Space" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Image press="onImagePress" src="{images>/Image_1}" alt="Confined Space" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
         <Link text="Confined Space" press="onImagePress" wrapping="true" class="customLink" />
       </FlexBox>
 

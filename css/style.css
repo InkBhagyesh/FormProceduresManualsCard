@@ -9,11 +9,13 @@
 .customLink:hover {
     text-decoration: none !important;
     background: transparent !important;
+    color: var(--sapList_TextColor) !important;
 }
 
 /* Remove active background */
 .customLink:active {
     background: transparent !important;
+    color: var(--sapList_TextColor) !important;
 }
 
 /* Remove focus background */

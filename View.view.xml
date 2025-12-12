@@ -62,13 +62,13 @@
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image press="onImagePress" src="{images>/Image_6}" alt="Excavation &amp; Trenching" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Excavation &amp; Trenching" press="onImagePress" wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_6}" alt="Excavation and Trenching" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Excavation and Trenching" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
-        <Image press="onImagePress" src="{images>/Image_7}" alt="Cranes &amp; Lifting" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Cranes &amp; Lifting" press="onImagePress" wrapping="true" />
+        <Image press="onImagePress" src="{images>/Image_7}" alt="Craning and Lifting" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
+        <Link text="Craning and Lifting" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">

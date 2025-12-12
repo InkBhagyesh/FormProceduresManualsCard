@@ -38,47 +38,47 @@
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_1}" alt="Confined Space" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Confined Space" press="onImagePress" wrapping="true" class="customLink" />
+        <Link text="Confined Space" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_2}" alt="Permit to Work" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Permit to Work" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="Permit to Work" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_3}" alt="Sewer Tech" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Sewer Tech" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="Sewer Tech" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_4}" alt="Water Tech" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Water Tech"  wrapping="true" class="customLink"/>
+        <Link text="Water Tech"  wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_5}" alt="Mobile Plant" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Mobile Plant" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="Mobile Plant" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_6}" alt="Excavation &amp; Trenching" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Excavation &amp; Trenching" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="Excavation &amp; Trenching" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_7}" alt="Cranes &amp; Lifting" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Cranes &amp; Lifting" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="Cranes &amp; Lifting" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_8}" alt="SWMS" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="SWMS" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="SWMS" press="onImagePress" wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_9}" alt="Product Handling" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Product Handling" press="onImagePress" wrapping="true" class="customLink"/>
+        <Link text="Product Handling" press="onImagePress" wrapping="true" />
       </FlexBox>
     </layout:Grid>
   </VBox>

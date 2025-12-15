@@ -25,35 +25,7 @@ sap.ui.define([
 		},
 
 		onAfterRendering: function () {
-			const oView = this.getView();
-			oView.setBusy(true);
-			this.getOwnerComponent().getModel().read("/GetFPGrpID", {
-				success: function (oData) {
-					const grpID = oData.GetFPGrpID;
-					if (!grpID) {
-						oView.setBusy(false);
-						return MessageToast.show("Group ID of Forms & Procedures not found");
-					}
-					//this._loadTop3Tabs(grpID);
-					this.getOwnerComponent().getModel("JAM").read(`/Groups('${grpID}')/NavTabs`, {
-						urlParameters: { "$select": "Title,Type,ContentUrl" },
-						success: function (oData) {
-							this.NavTabs = oData.results || [];
-							oView.setBusy(false);
-						}.bind(this),
-						error: function (oError) {
-							MessageToast.show("Error fetching NavTabs, check console logs for more details");
-							console.log(oError);
-							oView.setBusy(false);
-						}
-					});
-				}.bind(this),
-				error: function (oError) {
-					MessageToast.show("Error fetching Group ID, check console logs for more details");
-					console.log(oError);
-					oView.setBusy(false);
-				}
-			});
+			//this._loadTop3Tabs(grpID);
 		},
 
 		_loadTop3Tabs: function (sGroupId) {
@@ -126,19 +98,52 @@ sap.ui.define([
 		},
 
 		onImagePress: function (oEvent) {
+			const oView = this.getView();
+			oView.setBusy(true);
 			var oControl = oEvent.getSource();
 			var displayText = oControl.getAlt ? oControl.getAlt() : oControl.getText();
-			debugger
-			var oFoundItem = this.NavTabs.find(function (item) {
-				var sTitle = item.Title || "";
-				var sType = item.Type || "";
-				return sTitle.toLowerCase().trim() === displayText.toLowerCase().trim() && sType === "WorkpageGroupNavTab";
+			this.getOwnerComponent().getModel().read("/GetFPGrpID", {
+				success: function (oData) {
+					const grpID = oData.GetFPGrpID;
+					if (!grpID) {
+						oView.setBusy(false);
+						return MessageToast.show("Group ID of Forms & Procedures not found");
+					}
+					this.getOwnerComponent().getModel("JAM").read(`/Search`, {
+						urlParameters: {
+							"Query": "'" + displayText + "'",
+							"Group": "'" + grpID + "'",
+							"Category": "'workpages'",
+							"$expand": "ObjectReference",
+							"$select": "ObjectReference/Title,ObjectReference/WebURL,ObjectReference/Type",
+						},
+						success: function (oData) {
+							debugger
+							var oFoundItem = oData.results.find(function (item) {
+								var sTitle = item.ObjectReference.Title || "";
+								var sType = item.ObjectReference.Type || "";
+								return sTitle.toLowerCase().trim() === displayText.toLowerCase().trim() && sType === "NavTab";
+							});
+							if (oFoundItem) {
+								window.location.href = oFoundItem.ObjectReference.WebURL + "?headless=true&title=" + encodeURIComponent(displayText);
+							} else {
+								MessageToast.show("No item found with Title '" + displayText + "' and Type 'NavTab'.");
+							}
+							oView.setBusy(false);
+						}.bind(this),
+						error: function (oError) {
+							MessageToast.show("Error fetching NavTabs, check console logs for more details");
+							console.log(oError);
+							oView.setBusy(false);
+						}
+					});
+				}.bind(this),
+				error: function (oError) {
+					MessageToast.show("Error fetching Group ID, check console logs for more details");
+					console.log(oError);
+					oView.setBusy(false);
+				}
 			});
-			if (oFoundItem) {
-				window.location.href = window.location.origin + oFoundItem.ContentUrl + "?headless=true&title=" + encodeURIComponent(displayText);
-			} else {
-				MessageToast.show("No item found with Title '" + displayText + "' and Type 'WorkpageGroupNavTab'.");
-			}
 		},
 
 		onPopularTabPress: function (oEvent) {

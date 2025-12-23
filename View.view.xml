@@ -7,29 +7,14 @@
   
   <VBox class="sapUiMediumMargin">
 
-    <!-- 🔍 Search and Popular Searches -->
+      <SearchField placeholder="Forms, Procedures and manuals" search="onSearch" class="sapUiTinyMarginEnd" />
+
     <HBox alignItems="Center" wrap="Wrap" class="sapUiSmallMarginBottom">
-      <SearchField 
-        width="200px"
-        placeholder="Forms, Procedures and manuals" 
-        search="onSearch"
-        class="sapUiTinyMarginEnd" />
-
       <Title text="POPULAR SEARCHES" level="H5" class="sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd" />
-
       <Button text="PERMIT TO WORK" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
       <Button text="CONFINED SPACE" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
       <Button text="SWMS" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
       <Button text="SEWER TECH" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
-      <!-- <HBox visible="{= ${TopTabsModel>/}.length > 0 ? true : false }" items="{TopTabsModel>/}">
-        <items>
-          <Button 
-            text="{TopTabsModel>title}" 
-            type="Default" 
-            class="sapUiTinyMarginEnd" 
-            press=".onPopularTabPress" />
-        </items>
-      </HBox> -->
     </HBox>
     
     <Toolbar design="Transparent"></Toolbar>

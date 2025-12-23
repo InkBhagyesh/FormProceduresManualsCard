@@ -53,7 +53,7 @@
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">
         <Image press="onImagePress" src="{images>/Image_4}" alt="Water Tech" width="60px" height="60px" class="sapUiTinyMarginEnd"/>
-        <Link text="Water Tech"  wrapping="true" />
+        <Link text="Water Tech"  press="onImagePress"  wrapping="true" />
       </FlexBox>
 
       <FlexBox direction="Row" alignItems="Center" class="sapUiSmallMargin">

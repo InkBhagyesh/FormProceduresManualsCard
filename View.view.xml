@@ -7,9 +7,9 @@
   
   <VBox class="sapUiMediumMargin">
 
-      <SearchField placeholder="Forms, Procedures and manuals" search="onSearch" class="sapUiTinyMarginEnd" />
+      <SearchField placeholder="Forms, Procedures and manuals" search="onSearch" class="sapUiTinyMarginEnd sapUiSmallMarginBottom" />
 
-    <HBox alignItems="Center" wrap="Wrap" class="sapUiSmallMarginBottom">
+    <HBox alignItems="Center" justifyContent="Center" alignContent="Center" wrap="Wrap">
       <Title text="POPULAR SEARCHES" level="H5" class="sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd" />
       <Button text="PERMIT TO WORK" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
       <Button text="CONFINED SPACE" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>

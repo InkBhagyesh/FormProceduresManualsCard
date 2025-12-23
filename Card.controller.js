@@ -10,15 +10,15 @@ sap.ui.define([
 			var cardId = "com.winslow.FormsProceduresCard";
 			cardId = cardId.replace(/\./g, '/');
 			var oImgModel = new JSONModel({
-				Image_1: sap.ui.require.toUrl(cardId + "/images") + "/hard-hat.svg",
-				Image_2: sap.ui.require.toUrl(cardId + "/images") + "/scissor-lift.svg",
-				Image_3: sap.ui.require.toUrl(cardId + "/images") + "/alert.svg",
-				Image_4: sap.ui.require.toUrl(cardId + "/images") + "/demolition.svg",
-				Image_5: sap.ui.require.toUrl(cardId + "/images") + "/bulldozer.svg",
-				Image_6: sap.ui.require.toUrl(cardId + "/images") + "/works.svg",
-				Image_7: sap.ui.require.toUrl(cardId + "/images") + "/construction.svg",
-				Image_8: sap.ui.require.toUrl(cardId + "/images") + "/electrical-supply.svg",
-				Image_9: sap.ui.require.toUrl(cardId + "/images") + "/stakeholders.png"
+				Image_1: sap.ui.require.toUrl(cardId + "/images") + "/confined_space.png",
+				Image_2: sap.ui.require.toUrl(cardId + "/images") + "/permit_work.png",
+				Image_3: sap.ui.require.toUrl(cardId + "/images") + "/sewer.png",
+				Image_4: sap.ui.require.toUrl(cardId + "/images") + "/water_tech.png",
+				Image_5: sap.ui.require.toUrl(cardId + "/images") + "/mobile_plant.png",
+				Image_6: sap.ui.require.toUrl(cardId + "/images") + "/excavation_trenching.png",
+				Image_7: sap.ui.require.toUrl(cardId + "/images") + "/craning_lifting.png",
+				Image_8: sap.ui.require.toUrl(cardId + "/images") + "/swms.png",
+				Image_9: sap.ui.require.toUrl(cardId + "/images") + "/product_handling.png"
 			});
 			this.getView().setModel(oImgModel, "images");
 			this.NavTabs = [];

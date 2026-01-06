@@ -102,44 +102,35 @@ sap.ui.define([
 			oView.setBusy(true);
 			var oControl = oEvent.getSource();
 			var displayText = oControl.getAlt ? oControl.getAlt() : oControl.getText();
-			this.getOwnerComponent().getModel().read("/GetFPGrpID", {
+			const grpID = this.getOwnerComponent().getModel("cardData").getProperty("/FormsProceduresGroupID");
+			if (!grpID) {
+				oView.setBusy(false);
+				return MessageToast.show("Group ID of Forms & Procedures not found");
+			}
+			this.getOwnerComponent().getModel("JAM").read(`/Search`, {
+				urlParameters: {
+					"Query": "'" + displayText + "'",
+					"Group": "'" + grpID + "'",
+					"Category": "'workpages'",
+					"$expand": "ObjectReference",
+					"$select": "ObjectReference/Title,ObjectReference/WebURL,ObjectReference/Type",
+				},
 				success: function (oData) {
-					const grpID = oData.GetFPGrpID;
-					if (!grpID) {
-						oView.setBusy(false);
-						return MessageToast.show("Group ID of Forms & Procedures not found");
-					}
-					this.getOwnerComponent().getModel("JAM").read(`/Search`, {
-						urlParameters: {
-							"Query": "'" + displayText + "'",
-							"Group": "'" + grpID + "'",
-							"Category": "'workpages'",
-							"$expand": "ObjectReference",
-							"$select": "ObjectReference/Title,ObjectReference/WebURL,ObjectReference/Type",
-						},
-						success: function (oData) {
-							debugger
-							var oFoundItem = oData.results.find(function (item) {
-								var sTitle = item.ObjectReference.Title || "";
-								var sType = item.ObjectReference.Type || "";
-								return sTitle.toLowerCase().trim() === displayText.toLowerCase().trim() && sType === "NavTab";
-							});
-							if (oFoundItem) {
-								window.location.href = oFoundItem.ObjectReference.WebURL + "?headless=true&title=" + encodeURIComponent(displayText);
-							} else {
-								MessageToast.show("No item found with Title '" + displayText + "' and Type 'NavTab'.");
-							}
-							oView.setBusy(false);
-						}.bind(this),
-						error: function (oError) {
-							MessageToast.show("Error fetching NavTabs, check console logs for more details");
-							console.log(oError);
-							oView.setBusy(false);
-						}
+					debugger
+					var oFoundItem = oData.results.find(function (item) {
+						var sTitle = item.ObjectReference.Title || "";
+						var sType = item.ObjectReference.Type || "";
+						return sTitle.toLowerCase().trim() === displayText.toLowerCase().trim() && sType === "NavTab";
 					});
+					if (oFoundItem) {
+						window.location.href = oFoundItem.ObjectReference.WebURL + "?headless=true&title=" + encodeURIComponent(displayText);
+					} else {
+						MessageToast.show("No item found with Title '" + displayText + "' and Type 'NavTab'.");
+					}
+					oView.setBusy(false);
 				}.bind(this),
 				error: function (oError) {
-					MessageToast.show("Error fetching Group ID, check console logs for more details");
+					MessageToast.show("Error fetching NavTabs, check console logs for more details");
 					console.log(oError);
 					oView.setBusy(false);
 				}
@@ -157,7 +148,8 @@ sap.ui.define([
 		},
 
 		onSearch: function (oEvent) {
-			window.location.href = window.location.origin + "/groups/x350lY89aebGNVSR7in01k/workpage_tabs/qQcMiLDd0DXMRYej64O01k?headless=true&title=" + encodeURIComponent(oEvent.getSource().getValue());
+			const path = this.getOwnerComponent().getModel("cardData").getProperty("/GlobalSearchPath");
+			window.location.href = window.location.origin + path + "?headless=true&title=" + encodeURIComponent(oEvent.getSource().getValue());
 		}
 
 		// onImagePress: function () {

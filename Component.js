@@ -1,14 +1,21 @@
 sap.ui.define(['sap/ui/core/UIComponent', "sap/ui/model/odata/v2/ODataModel"],
-	function(UIComponent, ODataModel) {
-	"use strict";
+function (UIComponent, ODataModel) {
+    "use strict";
 
-	var Component = UIComponent.extend("com.winslow.FormsProceduresCard.Component", {
+    var Component = UIComponent.extend("com.winslow.FormsProceduresCard.Component", {
 
-		metadata : {
-			manifest: "json"
-		},
+        metadata: {
+            manifest: "json"
+        },
 
-		onCardReady: function (oCard) {
+        onCardReady: function (oCard) {
+            var oParams = oCard.getManifestEntry("sap.card").configuration.parameters;
+            var oCardModel = new sap.ui.model.json.JSONModel({
+                FormsProceduresGroupID: oParams?.FormsProceduresGroupID?.value || "",
+                GlobalSearchPath: oParams?.GlobalSearchPath?.value || ""
+            });
+            this.setModel(oCardModel, "cardData");
+
             oCard.resolveDestination("JAM").then(function (sResolvedUrl) {
                 if (sResolvedUrl.endsWith("/")) { sResolvedUrl = sResolvedUrl.slice(0, -1); }
                 var sServiceUrl = sResolvedUrl + "/api/v1/OData/";
@@ -45,8 +52,6 @@ sap.ui.define(['sap/ui/core/UIComponent', "sap/ui/model/odata/v2/ODataModel"],
                 console.error("Destination Resolution Failed", sError);
             });
         }
-	});
-
-	return Component;
-
+    });
+    return Component;
 });

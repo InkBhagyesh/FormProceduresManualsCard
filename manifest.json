@@ -53,6 +53,18 @@
 		"type": "Component",
 		"designtime": "dt/configuration",
 		"configuration": {
+			"parameters": {
+				"FormsProceduresGroupID": {
+					"type": "string",
+					"label": "Forms & Procedures Group ID",
+					"value": "ZXh1H0w85WvrL2yEX1B01k"
+				},
+				"GlobalSearchPath": {
+					"type": "string",
+					"label": "Global Search Path",
+					"value": "/groups/350lY89aebGNVSR7in01k/workpage_tabs/qQcMiLDd0DXMRYej64O01k"
+				}
+			},
 			"destinations": {
 				"JAM": {
 					"name": "JAM",

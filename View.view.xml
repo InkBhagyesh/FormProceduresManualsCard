@@ -7,16 +7,34 @@
   
   <VBox class="sapUiMediumMargin">
 
-      <SearchField placeholder="Forms, Procedures and manuals" search="onSearch" class="sapUiTinyMarginEnd sapUiSmallMarginBottom" />
+    <!-- Top: Search (Left aligned) -->
+    <SearchField
+        placeholder="Forms, Procedures and manuals"
+        search="onSearch"
+        class="sapUiSmallMarginBottom" />
 
-    <HBox alignItems="Center" justifyContent="Center" alignContent="Center" wrap="Wrap">
-      <Title text="POPULAR SEARCHES" level="H5" class="sapUiTinyMarginTop sapUiMediumMarginBegin sapUiMediumMarginEnd" />
-      <Button text="PERMIT TO WORK" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
-      <Button text="CONFINED SPACE" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
-      <Button text="SWMS" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
-      <Button text="SEWER TECH" type="Default" class="sapUiTinyMarginEnd" press="onImagePress"/>
+    <!-- Bottom: Title + Buttons (Right aligned) -->
+    <HBox
+    width="100%"
+    justifyContent="SpaceBetween"
+    alignItems="Center"
+    wrap="NoWrap">
+
+    <!-- Left: Title -->
+    <Title
+        text="POPULAR SEARCHES"
+        level="H5" />
+
+    <!-- Right: Buttons -->
+    <HBox alignItems="Center" wrap="Wrap">
+        <Button text="PERMIT TO WORK" class="sapUiTinyMarginEnd" press="onImagePress"/>
+        <Button text="CONFINED SPACE" class="sapUiTinyMarginEnd" press="onImagePress"/>
+        <Button text="SWMS" class="sapUiTinyMarginEnd" press="onImagePress"/>
+        <Button text="SEWER TECH" class="sapUiTinyMarginEnd" press="onImagePress"/>
     </HBox>
-    
+
+</HBox>
+
     <Toolbar design="Transparent"></Toolbar>
    
     <layout:Grid defaultSpan="L4 M6 S12" hSpacing="2" vSpacing="2">

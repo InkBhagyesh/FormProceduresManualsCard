@@ -14,26 +14,32 @@
         class="sapUiSmallMarginBottom" />
 
     <!-- Bottom: Title + Buttons (Right aligned) -->
-    <HBox
+<HBox
     width="100%"
-    justifyContent="SpaceBetween"
-    alignItems="Center"
-    wrap="NoWrap">
+    alignItems="Start"
+ >
 
-    <!-- Left: Title -->
+    <!-- Title -->
+    <VBox >
     <Title
         text="POPULAR SEARCHES"
-        level="H5" />
+        level="H5"
+       />
 
-    <!-- Right: Buttons -->
-    <HBox alignItems="Center" wrap="Wrap">
-        <Button text="PERMIT TO WORK" class="sapUiTinyMarginEnd" press="onImagePress"/>
-        <Button text="CONFINED SPACE" class="sapUiTinyMarginEnd" press="onImagePress"/>
-        <Button text="SWMS" class="sapUiTinyMarginEnd" press="onImagePress"/>
-        <Button text="SEWER TECH" class="sapUiTinyMarginEnd" press="onImagePress"/>
+    <!-- Buttons -->
+    <HBox
+        wrap="Wrap"
+        class="popularSearchButtons sapUiSmallMarginBegin">
+        <Button text="PERMIT TO WORK" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
+        <Button text="CONFINED SPACE" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
+        <Button text="SWMS" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
+        <Button text="SEWER TECH" class="sapUiTinyMarginBottom"/>
     </HBox>
-
+</VBox>
 </HBox>
+
+
+
 
     <Toolbar design="Transparent"></Toolbar>
    

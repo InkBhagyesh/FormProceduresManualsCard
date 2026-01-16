@@ -9,7 +9,7 @@
 
     <!-- Top: Search (Left aligned) -->
     <SearchField
-        placeholder="Forms, Procedures and manuals"
+        placeholder="Forms, Procedures And Manuals"
         search="onSearch"
         class="sapUiSmallMarginBottom" />
 
@@ -21,10 +21,7 @@
 
     <!-- Title -->
     <VBox >
-    <Title
-        text="POPULAR SEARCHES"
-        level="H5"
-       />
+    <Title text="POPULAR SEARCHES" level="H5" class="sapUiTinyMarginBottom"/>
 
     <!-- Buttons -->
     <HBox
@@ -33,7 +30,8 @@
         <Button text="PERMIT TO WORK" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
         <Button text="CONFINED SPACE" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
         <Button text="SWMS" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
-        <Button text="SEWER TECH" class="sapUiTinyMarginBottom"/>
+        <Button text="SEWER TECH" class="sapUiTinyMarginEnd sapUiTinyMarginBottom"/>
+        <Button text="WATER TECH" class="sapUiTinyMarginBottom"/>
     </HBox>
 </VBox>
 </HBox>

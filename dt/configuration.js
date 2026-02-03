@@ -14,6 +14,11 @@ sap.ui.define(["sap/ui/integration/Designtime"], function (
                         label: "Forms & Procedures Group ID",
 					    required: true
                     },
+                    FormsProceduresSWMSGroupID: {
+                        manifestpath: "/sap.card/configuration/parameters/FormsProceduresSWMSGroupID/value",
+                        label: "Forms & Procedures Group ID",
+					    required: true
+                    },
                     GlobalSearchPath: {
                         manifestpath: "/sap.card/configuration/parameters/GlobalSearchPath/value",
                         label: "Global Search Path",

@@ -12,6 +12,7 @@ function (UIComponent, ODataModel) {
             var oParams = oCard.getManifestEntry("sap.card").configuration.parameters;
             var oCardModel = new sap.ui.model.json.JSONModel({
                 FormsProceduresGroupID: oParams?.FormsProceduresGroupID?.value || "",
+                FormsProceduresSWMSGroupID: oParams?.FormsProceduresSWMSGroupID?.value || "",
                 GlobalSearchPath: oParams?.GlobalSearchPath?.value || ""
             });
             this.setModel(oCardModel, "cardData");

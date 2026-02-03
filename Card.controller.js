@@ -98,11 +98,13 @@ sap.ui.define([
 		},
 
 		onImagePress: function (oEvent) {
+			debugger
 			const oView = this.getView();
 			oView.setBusy(true);
 			var oControl = oEvent.getSource();
 			var displayText = oControl.getAlt ? oControl.getAlt() : oControl.getText();
-			const grpID = this.getOwnerComponent().getModel("cardData").getProperty("/FormsProceduresGroupID");
+			var sProp = (displayText === "SWMS") ? "/FormsProceduresSWMSGroupID" : "/FormsProceduresGroupID";
+			var grpID = this.getOwnerComponent().getModel("cardData").getProperty(sProp);
 			if (!grpID) {
 				oView.setBusy(false);
 				return MessageToast.show("Group ID of Forms & Procedures not found");

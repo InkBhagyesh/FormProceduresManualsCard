@@ -59,6 +59,11 @@
 					"label": "Forms & Procedures Group ID",
 					"value": "ZXh1H0w85WvrL2yEX1B01k"
 				},
+				"FormsProceduresSWMSGroupID": {
+					"type": "string",
+					"label": "Forms & Procedures Group ID",
+					"value": "eXBO8cIaSJsDR5SLMef01k"
+				},
 				"GlobalSearchPath": {
 					"type": "string",
 					"label": "Global Search Path",

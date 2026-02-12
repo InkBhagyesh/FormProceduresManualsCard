@@ -78,15 +78,13 @@ sap.ui.define([
 				groupId: sBatchGroupId,
 				success: function () {
 					// 1. Sort Descending by Views
-					debugger
+					// debugger
 					aTabStats.sort(function (a, b) {
 						return b.views - a.views;
 					});
 
 					// 2. Slice Top 3
 					var aTop3 = aTabStats.slice(0, 3);
-
-					console.log("Top 3 Popular Tabs:", aTop3);
 
 					this.getView().setModel(new JSONModel(aTop3), "TopTabsModel");
 
@@ -98,7 +96,7 @@ sap.ui.define([
 		},
 
 		onImagePress: function (oEvent) {
-			debugger
+			// debugger
 			const oView = this.getView();
 			oView.setBusy(true);
 			var oControl = oEvent.getSource();
@@ -118,7 +116,7 @@ sap.ui.define([
 					"$select": "ObjectReference/Title,ObjectReference/WebURL,ObjectReference/Type",
 				},
 				success: function (oData) {
-					debugger
+					// debugger
 					var oFoundItem = oData.results.find(function (item) {
 						var sTitle = item.ObjectReference.Title || "";
 						var sType = item.ObjectReference.Type || "";
@@ -132,8 +130,7 @@ sap.ui.define([
 					oView.setBusy(false);
 				}.bind(this),
 				error: function (oError) {
-					MessageToast.show("Error fetching NavTabs, check console logs for more details");
-					console.log(oError);
+					MessageToast.show("No item found with Title");
 					oView.setBusy(false);
 				}
 			});
